@@ -1,0 +1,31 @@
+{
+  "name": "pwa-test",
+  "version": "1.0.0",
+  "description": "sdf",
+  "scripts": {
+    "build": "parcel build --detailed-report --public-url . src/index.html",
+    "watch": "parcel watch --public-url . src/index.html",
+    "serve": "parcel serve --port 1235 src/index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.0.0-beta.2",
+    "parcel-config-pwa-manifest": "0.0.9"
+  },
+  "pwaManifest": {
+    "name": "My Awesome PWA",
+    "shortName": "My PWA",
+    "startURL": "./offline",
+    "theme": "#add8e6",
+    "generateIconOptions": {
+      "baseIcon": "./src/my-awesome-icon.svg",
+      "sizes": [
+        192,
+        384,
+        512
+      ],
+      "genFavicons": true
+    }
+  }
+}
